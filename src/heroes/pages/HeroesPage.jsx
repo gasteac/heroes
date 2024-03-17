@@ -20,7 +20,8 @@ export const HeroesPage = () => {
               }}>
               DC Comics
             </h1>
-            <img class='tarjeta' src="./src/assets/heroes/dc-batman.jpg" />
+            <img class='tarjeta' 
+            src={`https://github.com/gasteac/heros/blob/main/src/assets/heroes/dc-batman.jpg?raw=true`} />
           </div>
         </Link>
         <Link to="dc">
@@ -34,7 +35,8 @@ export const HeroesPage = () => {
               }}>
               Marvel
             </h1>
-            <img class='tarjeta' src="./src/assets/heroes/marvel-spider.jpg" />
+            <img class='tarjeta' 
+               src={`https://github.com/gasteac/heros/blob/main/src/assets/heroes/marvel-spider.jpg?raw=true`}/>
           </div>
         </Link>
       </div>

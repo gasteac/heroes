@@ -16,7 +16,8 @@ export const HeroCard = ({ // atributos del objeto heroe
   characters,
 }) => {
 
-    const heroImageUrl = `src/assets/heroes/${id}.jpg`;
+    const heroImageUrl = `https://github.com/gasteac/heros/blob/main/src/assets/heroes/${id}.jpg?raw=true`;
+
 
   return (
     <div className="col animate__animated animate__fadeIn animate__faster">
