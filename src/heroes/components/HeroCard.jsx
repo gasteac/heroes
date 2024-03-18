@@ -16,7 +16,7 @@ export const HeroCard = ({ // atributos del objeto heroe
   characters,
 }) => {
 
-    const heroImageUrl = `https://github.com/gasteac/heros/blob/main/src/assets/heroes/${id}.jpg?raw=true`;
+    const heroImageUrl = `/heroes/${id}.jpg`;
 
 
   return (

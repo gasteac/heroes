@@ -23,7 +23,7 @@ export const HeroPage = () => {
        
        <hr />
       <div className='col-3' >
-        <img className='img-thumbnail animate__animated animate__fadeInLeft animate__faster '  src={`https://github.com/gasteac/heros/blob/main/src/assets/heroes/${id}.jpg?raw=true`} alt={hero.superhero} />
+        <img className='img-thumbnail animate__animated animate__fadeInLeft animate__faster '  src={`/heroes/${ id }.jpg`} alt={hero.superhero} />
       </div>
       <div className="col-9">
         <h3>{hero.superhero}</h3>
