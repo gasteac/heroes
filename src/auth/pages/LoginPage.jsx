@@ -6,15 +6,15 @@ import { NavBar } from "../../ui/components/NavBar";
 export const LoginPage = () => {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
-  const [nameInput, setNameInput] = useState('')
-  const handleInput = ({target})=>{
-    setNameInput(target.value)
-    console.log(nameInput)
-  }
+  const [nameInput, setNameInput] = useState("");
+  const handleInput = ({ target }) => {
+    setNameInput(target.value);
+    console.log(nameInput);
+  };
 
   const handleLogin = () => {
     const lastPath = localStorage.getItem("lastPath" || "/");
-    login(nameInput || 'Ricardo');
+    login(nameInput || "Ricardo");
     navigate(lastPath, {
       replace: true,
     });
@@ -26,18 +26,20 @@ export const LoginPage = () => {
       <div className="container mt-5">
         <h1>Login</h1>
         <hr />
-        <h3>
-          Please provide your name or just be Ricardo
-        </h3>
-        <div className="d-flex">
-          <input type="text" value={nameInput} placeholder="Ricardo" onChange={handleInput}/>
-          <button
-            onClick={() => handleLogin()}
-            className="btn btn-primary mx-2"
-          >
-            Login
-          </button>
-        </div>
+        <h3>Please provide your name or just be Ricardo</h3>
+        <form onSubmit={() => handleLogin()}>
+          <div className="d-flex">
+            <input
+              type="text"
+              value={nameInput}
+              placeholder="Ricardo"
+              onChange={handleInput}
+            />
+            <button type="submit" className="btn btn-primary mx-2">
+              Login
+            </button>
+          </div>
+        </form>
       </div>
     </>
   );
