@@ -8,8 +8,8 @@ export const HeroesPage = () => {
         Choose your destiny
       </h1>
       <hr />
-      <div className="d-flex justify-content-between">
-        <Link to="marvel">
+      <div className="d-flex">
+        <Link to="dc">
           <div className="p-1 card animate__animated animate__fadeInLeft animate__faster">
             <h1
               style={{
@@ -24,8 +24,8 @@ export const HeroesPage = () => {
             <img className="tarjeta" src="/heroes/dc-batman.jpg" />
           </div>
         </Link>
-        <Link to="dc">
-          <div className="p-1 card animate__animated animate__fadeInRight animate__faster">
+        <Link to="marvel">
+          <div className="p-1 card animate__animated animate__fadeInRight animate__faster mx-5">
             <h1
               style={{
                 position: "absolute",
