@@ -12,7 +12,6 @@ export const AuthProvider = ({ children }) => {
     };
   };
   const [authState, dispatch] = useReducer(AuthReducer, {}, init);
-
   const login = (name = "") => {
     const user = { id: crypto.randomUUID(), name };
     const action = { type: types.login, payload: user };
