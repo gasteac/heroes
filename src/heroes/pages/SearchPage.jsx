@@ -7,7 +7,7 @@ import { getHeroesByName } from "../helpers/getHeroesByName";
 export const SearchPage = () => {
   const [searchParams, setSearchParams] = useSearchParams(); //esto se hace asi nomas
   const [input, setInput] = useState(searchParams.get("q"));
-  const query = searchParams.get("q") != null ? searchParams.get("q") : '';
+  const query = searchParams.get("q") != null ? searchParams.get("q") : "";
   const heroes = useMemo(() => (query ? getHeroesByName(query) : []), [query]); //asi obtengo los heroes si existe una query, : sino arreglo vacio
   const navigate = useNavigate();
   const onNavigateBack = () => {
@@ -18,7 +18,7 @@ export const SearchPage = () => {
     setSearchParams({});
   };
 
-  const showSearch = (query.length === 0);
+  const showSearch = query.length === 0;
   const onInputChange = ({ target }) => {
     setInput(target.value);
   };
@@ -45,7 +45,7 @@ export const SearchPage = () => {
               placeholder="Search a hero"
               className="form-control"
               autoComplete="off"
-              value={input || ''}
+              value={input || ""}
               onChange={onInputChange}
             />
             <div className="d-flex mt-1">

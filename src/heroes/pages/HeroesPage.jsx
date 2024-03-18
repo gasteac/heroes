@@ -9,7 +9,7 @@ export const HeroesPage = () => {
       </h1>
       <hr />
       <div className="d-flex justify-content-between">
-        <Link  to="marvel" >
+        <Link to="marvel">
           <div className="p-1 card animate__animated animate__fadeInLeft animate__faster">
             <h1
               style={{
@@ -17,11 +17,11 @@ export const HeroesPage = () => {
                 top: "3%",
                 left: "50%",
                 fontWeight: "bold",
-              }}>
+              }}
+            >
               DC Comics
             </h1>
-            <img className='tarjeta' 
-            src="/heroes/dc-batman.jpg" />
+            <img className="tarjeta" src="/heroes/dc-batman.jpg" />
           </div>
         </Link>
         <Link to="dc">
@@ -32,11 +32,11 @@ export const HeroesPage = () => {
                 top: "13%",
                 left: "20%",
                 fontWeight: "bold",
-              }}>
+              }}
+            >
               Marvel
             </h1>
-            <img className='tarjeta' 
-               src="/heroes/marvel-spider.jpg"/>
+            <img className="tarjeta" src="/heroes/marvel-spider.jpg" />
           </div>
         </Link>
       </div>

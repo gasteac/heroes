@@ -1,6 +1,6 @@
 import React from "react";
 import { HeroList } from "../components/";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export const DcPage = React.memo(() => {
   const navigate = useNavigate();
@@ -9,14 +9,14 @@ export const DcPage = React.memo(() => {
   };
   return (
     <>
-          <div className="d-flex align-items-center mt-5  animate__animated animate__animated animate__bounceIn animate__faster">
+      <div className="d-flex align-items-center mt-5  animate__animated animate__animated animate__bounceIn animate__faster">
         <button onClick={() => onNavigateBack()} className="btn btn-primary">
           Back
         </button>
         <h1 className="mx-3">DC Comics</h1>
       </div>
       <hr />
-      <HeroList publisher='DC Comics'/>
+      <HeroList publisher="DC Comics" />
     </>
   );
 });
