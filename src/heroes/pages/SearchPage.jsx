@@ -45,7 +45,7 @@ export const SearchPage = () => {
               placeholder="Search a hero"
               className="form-control"
               autoComplete="off"
-              value={input}
+              value={input || ''}
               onChange={onInputChange}
             />
             <div className="d-flex mt-1">
