@@ -29,54 +29,56 @@ export const SearchPage = () => {
   };
   return (
     <>
-      <div className="d-flex align-items-center mt-5  animate__animated animate__animated animate__fadeInLeft  animate__faster ">
-        <button onClick={() => onNavigateBack()} className="btn btn-primary">
-          Back
-        </button>
-        <h1 className="mx-3">Search</h1>
-      </div>
-      <hr />
-      <div className="row">
-        <div className="col-5">
-          <h4>Search by name</h4>
-          <form onSubmit={onSearchSubmit}>
-            <input
-              type="text"
-              placeholder="Search a hero"
-              className="form-control"
-              autoComplete="off"
-              value={input || ""}
-              onChange={onInputChange}
-            />
-            <div className="d-flex mt-1">
-              <button className="btn btn-primary mt-2">Search</button>
-            </div>
-          </form>
-          <button
-            onClick={() => {
-              onResetSearch();
-            }}
-            className="btn btn-danger mt-2"
-          >
-            Reset?
+      <div className="mt-5">
+        <div className="d-flex align-items-center animate__animated animate__animated animate__fadeInLeft  animate__faster ">
+          <button onClick={() => onNavigateBack()} className="btn btn-primary">
+            Back
           </button>
+          <h1 className="mx-3">Search</h1>
         </div>
-        <div className="col-7">
-          <h4>Results</h4>
+        <hr />
+        <div className="row">
+          <div className="col-5">
+            <h4>Search hero by name</h4>
+            <form onSubmit={onSearchSubmit}>
+              <input
+                type="text"
+                placeholder="For example: super, wonder"
+                className="form-control"
+                autoComplete="off"
+                value={input || ""}
+                onChange={onInputChange}
+              />
+              <div className="d-flex mt-1">
+                <button className="btn btn-primary mt-2">Search</button>
+              </div>
+            </form>
+            <button
+              onClick={() => {
+                onResetSearch();
+              }}
+              className="btn btn-danger mt-2"
+            >
+              Reset?
+            </button>
+          </div>
+          <div className="col-7">
+            <h4>Results</h4>
 
-          <div className="overflow-hidden p-1">
-            {showSearch ? (
-              <div className="alert alert-primary">Search for heroes</div>
-            ) : (
-              heroes.length === 0 && (
-                <div className="alert alert-danger">
-                  No hero was found with <b>{query}</b>{" "}
-                </div>
-              )
-            )}
-            {heroes.map((hero) => (
-              <HeroCard key={hero.id} {...hero} />
-            ))}
+            <div className="overflow-hidden p-1">
+              {showSearch ? (
+                <div className="alert alert-primary">Search for heroes</div>
+              ) : (
+                heroes.length === 0 && (
+                  <div className="alert alert-danger">
+                    No hero was found with <b>{query}</b>{" "}
+                  </div>
+                )
+              )}
+              {heroes.map((hero) => (
+                <HeroCard key={hero.id} {...hero} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

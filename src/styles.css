@@ -1,6 +1,6 @@
 .tarjeta img:hover {
   transform: scale(1.02, 1.02);
-  filter: drop-shadow(1px 1px 4px rgb(158, 71, 71));
+  filter: drop-shadow(1px 1px 6px rgb(255, 255, 255));
   transition: all ease 0.2s;
 }
 
@@ -15,16 +15,15 @@
 }
 
 .navbar {
+  position: relative;
+  top: 0;
+  width: 100vw;
   padding: 5px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    176deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 193, 190, 1) 100%
-  );
+  background: linear-gradient(176deg, rgb(0, 0, 0) 0%, rgb(12, 61, 60) 100%);
 }
 
 .navbar > a {
@@ -36,12 +35,12 @@
 .navbar > a:hover {
   font-size: larger;
   text-decoration: none;
-  color: rgb(17, 91, 210);
+  color: rgb(81, 148, 255);
 }
 
 .navbar .icon h2 {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .navbar .logoutuser {
@@ -75,11 +74,11 @@
 }
 
 .containerLogin {
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 70vh;
 }
 
 .homePage {
@@ -89,17 +88,15 @@
 }
 
 .active {
-  color: rgb(17, 91, 210) !important;
+  color: rgb(81, 148, 255) !important;
 }
 
 body {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    176deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 193, 190, 1) 100%
-  );
+
+  background: linear-gradient(176deg, rgb(0, 0, 0) 50%, rgb(8, 76, 75) 100%);
+  background-attachment: fixed;
   height: 100vh;
+  color: white;
 }
 
 * {

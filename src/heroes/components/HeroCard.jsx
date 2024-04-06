@@ -17,11 +17,16 @@ export const HeroCard = ({
 
   return (
     <div className="col animate__animated animate__fadeIn animate__faster">
-      <div className="card m-1">
+      <div style={{'border': 'none' }}className="card  m-2">
         <div className="row g-0">
           <div className="col-5">
             <Link to={`/hero/${id}`}>
-              <img src={heroImageUrl} loading="lazy" className="card-img" alt={superhero} />
+              <img
+                src={heroImageUrl}
+                loading="lazy"
+                className="card-img"
+                alt={superhero}
+              />
             </Link>
           </div>
           <div className="col-7">
