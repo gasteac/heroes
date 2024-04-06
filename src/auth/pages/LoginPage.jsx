@@ -14,7 +14,7 @@ export const LoginPage = () => {
 
   const handleLogin = () => {
     const lastPath = localStorage.getItem("lastPath" || "/");
-    login(nameInput || "Ricardo");
+    login(nameInput || "NoName");
     navigate(lastPath, {
       replace: true,
     });
@@ -26,13 +26,13 @@ export const LoginPage = () => {
       <div className="container mt-5">
         <h1>Login</h1>
         <hr />
-        <h3>Please provide your name or just be Ricardo</h3>
+        <h3>Please provide your name :)</h3>
         <form onSubmit={() => handleLogin()}>
           <div className="d-flex">
             <input
               type="text"
               value={nameInput}
-              placeholder="Ricardo"
+              placeholder="Name"
               onChange={handleInput}
             />
             <button type="submit" className="btn btn-primary mx-2">
