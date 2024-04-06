@@ -29,7 +29,7 @@ export const SearchPage = () => {
   };
   return (
     <>
-      <div className="d-flex align-items-center mt-5  animate__animated animate__animated animate__bounceIn animate__faster ">
+      <div className="d-flex align-items-center mt-5  animate__animated animate__animated animate__fadeInLeft  animate__faster ">
         <button onClick={() => onNavigateBack()} className="btn btn-primary">
           Back
         </button>
@@ -49,14 +49,14 @@ export const SearchPage = () => {
               onChange={onInputChange}
             />
             <div className="d-flex mt-1">
-              <button className="btn btn-outline-primary mt-2">Search</button>
+              <button className="btn btn-primary mt-2">Search</button>
             </div>
           </form>
           <button
             onClick={() => {
               onResetSearch();
             }}
-            className="btn btn-outline-danger mt-2"
+            className="btn btn-danger mt-2"
           >
             Reset?
           </button>

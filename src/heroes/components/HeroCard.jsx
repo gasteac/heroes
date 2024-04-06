@@ -21,7 +21,7 @@ export const HeroCard = ({
         <div className="row g-0">
           <div className="col-5">
             <Link to={`/hero/${id}`}>
-              <img src={heroImageUrl} className="card-img" alt={superhero} />
+              <img src={heroImageUrl} loading="lazy" className="card-img" alt={superhero} />
             </Link>
           </div>
           <div className="col-7">

@@ -14,63 +14,50 @@ export const NavBar = () => {
     });
   };
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-3">
+    <nav className="navbar">
       {user ? (
-        <Link className="navbar-brand" to="/">
-          Heroes🦾
+        <Link className="icon" to="/">
+          <h2>Heroes🦾</h2>
         </Link>
       ) : (
-        <div className="navbar-brand">Heroes🦾</div>
+        <h2>Heroes🦾</h2>
       )}
-      <div className="navbar-collapse">
-        <div className="navbar-nav">
-          {user && (
-            <>
-              <NavLink
-                className={({ isActive }) =>
-                  `nav-link ${isActive ? "active" : ""}`
-                }
-                to="/marvel"
-              >
-                Marvel
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  `nav-link ${isActive ? "active" : ""}`
-                }
-                to="/dc"
-              >
-                DC
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  `nav-link ${isActive ? "active" : ""}`
-                }
-                to="/search"
-              >
-                Search
-              </NavLink>
-            </>
-          )}
-        </div>
-      </div>
 
-      <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-        <ul className="navbar-nav ml-auto">
-          <span className="nav-item nav-link text-primary mr-2">
-            {user?.name}
-          </span>
-          {user && (
-            <button
-              onClick={() => {
-                hadleLogout();
-              }}
-              className="nav-item nav-link btn"
-            >
-              Logout
-            </button>
-          )}
-        </ul>
+      {user && (
+        <>
+          <NavLink
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            to="/marvel"
+          >
+            Marvel
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            to="/dc"
+          >
+            DC
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            to="/search"
+          >
+            Search
+          </NavLink>
+        </>
+      )}
+
+      <div className="logoutuser">
+        <span>{user?.name}</span>
+        {user && (
+          <button
+            onClick={() => {
+              hadleLogout();
+            }}
+            className="nav-item nav-link btn"
+          >
+            Logout
+          </button>
+        )}
       </div>
     </nav>
   );

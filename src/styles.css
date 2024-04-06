@@ -1,7 +1,109 @@
-.tarjeta:hover{
-    box-shadow: 0 0 25px rgb(8, 187, 187); /* Sombras alrededor de la tarjeta cuando se pasa el mouse */
+.tarjeta img:hover {
+  transform: scale(1.02, 1.02);
+  filter: drop-shadow(1px 1px 4px rgb(158, 71, 71));
+  transition: all ease 0.2s;
 }
 
-.tarjeta{
-    width: 400px;
+::-webkit-scrollbar {
+  display: none;
+}
+
+.tarjeta img {
+  height: 30rem;
+  width: 20rem;
+  border-radius: 20px;
+}
+
+.navbar {
+  padding: 5px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    176deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 193, 190, 1) 100%
+  );
+}
+
+.navbar > a {
+  font-size: larger;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar > a:hover {
+  font-size: larger;
+  text-decoration: none;
+  color: rgb(17, 91, 210);
+}
+
+.navbar .icon h2 {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.navbar .logoutuser {
+  display: flex;
+}
+
+.navbar .logoutuser span {
+  color: white;
+  margin-right: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+}
+
+.navbar .logoutuser button {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar .logoutuser button:hover {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(179, 5, 5);
+}
+
+.inputLogin {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.containerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active {
+  color: rgb(17, 91, 210) !important;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    176deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 193, 190, 1) 100%
+  );
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

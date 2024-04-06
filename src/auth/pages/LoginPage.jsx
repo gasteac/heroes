@@ -23,15 +23,15 @@ export const LoginPage = () => {
   return (
     <>
       <NavBar />
-      <div className="container mt-5">
-        <h1>Login</h1>
-        <hr />
-        <h3>Please provide your name :)</h3>
+      <div className="containerLogin">
+        <h3 className="mb-3">Please provide your name :)</h3>
         <form onSubmit={() => handleLogin()}>
           <div className="d-flex">
             <input
+              className="inputLogin"
               type="text"
               value={nameInput}
+              autoComplete="off"
               placeholder="Name"
               onChange={handleInput}
             />

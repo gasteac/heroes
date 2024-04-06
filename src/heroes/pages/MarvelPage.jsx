@@ -9,7 +9,7 @@ export const MarvelPage = () => {
   };
   return (
     <>
-      <div className="d-flex align-items-center mt-5  animate__animated animate__animated animate__bounceIn animate__faster">
+      <div className="d-flex align-items-center mt-5  animate__animated animate__animated animate__fadeInLeft  animate__faster">
         <button onClick={() => onNavigateBack()} className="btn btn-primary">
           Back
         </button>

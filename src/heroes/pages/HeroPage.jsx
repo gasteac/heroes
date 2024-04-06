@@ -26,6 +26,7 @@ export const HeroPage = () => {
       <hr />
       <div className="col-3">
         <img
+          loading="lazy"
           className="img-thumbnail animate__animated animate__fadeInLeft animate__faster "
           src={`/heroes/${id}.jpg`}
           alt={hero.superhero}
